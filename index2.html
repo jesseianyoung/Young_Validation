@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="validation js/validation2.js"></script>
+    <title>Create a New Event</title>
+</head>
+<body>
+   <form>
+        <label for="Events"><b>Event type: </b></label>
+        <select id="Events" name="eventtype" onchange="validateDropbox()" required>
+                <option value="">Choose one:</option>
+                <option value="Anniversary">Bithday Party</option>
+                <option value="Family Reunion">Wedding</option>
+                <option value="Seminars">Aniversary</option>
+                <option value="Trainings">Trainings</option>
+                <option value="Wedding">Seminars</option>
+                
+          </select>
+          <br><br> 
+
+          <label for="1"><b>Event Title: </b></label>
+          <input type="text" name="Event Title" id="1" required> 
+          <br><br> 
+
+          <label for = "1 2"><b>Event Dates:</b></label>
+        <input type = "date" name = "eventDateStart" id = "2" required> to
+        <input type = "date" name = "eventDateEnd" id = "3" required>
+          <br><br>
+
+          <label for = "4"><b>Posting Date</b></label> 
+          <input type = "text" name = "postingDate" id = "4" pattern = "^(((0)[0-9])|((1)[0-2]))([\/])([0-2][0-9]|(3)[0-1])([\/])([0-9]{4})$" minlength="10" maxlength="10" required> Use the prescribed Date format: mm/dd/yyyy
+    
+    <br><br><br>
+
+        <fieldset name="set">      
+            <input type="checkbox" name="check" id="a" value="Check Registration">Is registration required?<br>      
+            <input type="checkbox" name="check" id="b" value="Check Events associated family">Is this event associated with any Family Programs?<br>      
+            <input type="checkbox" name="check" id="c" value="Check Registration Completion Receive a Generative Email">Upon Registration Completion, Are Users to Receive an Auto Generated Email?<br>
+            <input type="checkbox" name="check" id="d" value="Check contacts">Is There a Point of Contact?<br>  
+            <input type="checkbox" name="check" id="e" value="Check hosting commant point of contact">Is There a Hosting Command Point of Contact?<br>  
+            <br>      
+        </fieldset> 
+    </form>
+    <br><br>
+    
+        <input type="submit" value="Save" onclick="validate()">
+        <input type="button" value="Cancel" onclick="reset()">
+   
+    
+</body>
+</html>
